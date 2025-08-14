@@ -111,7 +111,20 @@ you can resume training by adding this flag with the last epoch
 ```bash
 python result2.py
 ```
-The pythn file result1.py for ssd mb1 et result2.py for v2.
+The python file result1.py for ssd mb1 et result2.py for v2.
+
+output: 
+✅ Meilleur checkpoint : mb2-ssd-lite-Epoch-730-Loss-1.9619.pth (Epoch 730, Loss 1.9619)
+📂 Chemin complet : models/model_mb2/mb2-ssd-lite-Epoch-730-Loss-1.9619.pth
+Evaluation images: 100%|██████████████████████| 142/142 [00:09<00:00, 15.37it/s]
+
+📊 Evaluation Metrics :
+ - mAP (AP for person): 0.8000
+ - Total images evaluated: 250
+ - Average persons per image: 9.28
+
+✅ Graphiques sauvegardés dans le dossier 'results/'
+
 
 This will generate histogram_scores.png, person_count.png and precision_recall_curve.png in results folder.
 
@@ -136,12 +149,13 @@ python3 inference_mb2_video.py \
 ```bash
   python3 inference_mb2_video.py \
   --video 0 \
-  --model models/model_mb2/mb2-ssd-lite-Epoch-225-Loss-2.6423.pth \
+  --model models/model_mb2/mb2-ssd-lite-Epoch-xxx-Loss-1.6423.pth \
   --labels models/model_mb2/labels.txt \
   --threshold 0.4
 ```
 
 **inference via cam**
 ```bash
-python3 inference2.py   --video "rtsp://admin:L2E78815@10.0.22.1:554/cam/realmonitor?channel=1&subtype=1&unicast=true&proto=Onvif"   --model models/model_mb2/mb2-ssd-lite-Epoch-530-Loss-2.0126.pth   --labels models/model_mb2/labels.txt   --threshold 0.5
+python3 inference2.py   --video "rtsp://admin:xxxxxx@xx.0.xx.1:xxx/cam/realmonitor?channel=1&subtype=1&unicast=true&proto=Onvif"   --model models/model_mb2/mb2-ssd-lite-Epoch-best-one.pth   --labels models/model_mb2/labels.txt   --threshold 0.5
 ```
+You can update threshold as you want.
