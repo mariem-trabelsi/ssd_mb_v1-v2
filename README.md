@@ -80,7 +80,7 @@ zipp 3.23.0
 
 Follow these steps to train and run the model:
 
-1. **Create a Python virtual environment**
+1. **Create a Python virtual environment and install libs**
 ```bash
 python -m venv venv
 source venv/bin/activate   # Linux/macOS
@@ -95,18 +95,25 @@ Use Roboflow to label your images in VOC XML format.
 Unzip your dataset.
 Split it using the command:
 ```bash
-python seperate_dataset.py
+python seperateImages.py
 ```
 
 4. **Start training**
 ```bash
-python seperate_dataset.py
+python3 train_ssd_mb2.py     --validation-epochs 5     --log-level info     
+
 ```
-5. evaluation
+you can resume training by adding this flag with the last epoch
 ```bash
-python seperate_dataset.py
+--resume models/model_mb2/checkpoint-epoch-xx.pth
 ```
-this will generate histogram_scores.png, person_count.png and precision_recall_curve.png in results folder.
+5. **evaluation**
+```bash
+python result2.py
+```
+The pythn file result1.py for ssd mb1 et result2.py for v2.
+
+This will generate histogram_scores.png, person_count.png and precision_recall_curve.png in results folder.
 
 
 
