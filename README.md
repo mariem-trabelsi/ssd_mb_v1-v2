@@ -84,7 +84,8 @@ Follow these steps to train and run the model:
 ```bash
 python -m venv venv
 source venv/bin/activate   # Linux/macOS
-venv\Scripts\activate      # Windows```
+venv\Scripts\activate      # Windows
+```
 
 2. **Annotate your data**
 Use Roboflow to label your images in VOC XML format.
@@ -94,18 +95,19 @@ Use Roboflow to label your images in VOC XML format.
 Unzip your dataset.
 Split it using the command:
 ```bash
-
+python seperate_dataset.py
 ```
 
 4. **Start training**
-
+```bash
+python seperate_dataset.py
+```
 5. evaluation
+```bash
+python seperate_dataset.py
+```
+this will generate histogram_scores.png, person_count.png and precision_recall_curve.png
 
-You can also optionally include an **image preview** of the graphs in your README if you save them as `.png` in the `results/` folder:
-
-```markdown
-![Training Loss Graph](results/loss_curve.png)
-![Validation mAP](results/map_curve.png)
 
 
 
