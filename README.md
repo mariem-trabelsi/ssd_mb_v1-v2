@@ -84,8 +84,8 @@ Follow these steps to train and run the model:
 ```bash
 python -m venv venv
 source venv/bin/activate   # Linux/macOS
-venv\Scripts\activate      # Windows
----
+venv\Scripts\activate      # Windows```
+
 2. **Annotate your data**
 Use Roboflow to label your images in VOC XML format.
 
@@ -93,6 +93,9 @@ Use Roboflow to label your images in VOC XML format.
 
 Unzip your dataset.
 Split it using the command:
+```bash
+
+```
 
 4. **Start training**
 
@@ -108,3 +111,27 @@ You can also optionally include an **image preview** of the graphs in your READM
 
 6. **Run inference**
 Test your trained model using the inference script:
+```bash
+**** inference from local video
+python3 inference_mb2_video.py \
+  --video data/video.mp4 \
+  --model models/model_mb2/best_epoch.pth \
+  --labels models/model_mb2/labels.txt \
+  --threshold 0.4 \
+  --use-cuda true \
+  --save output_mb2.mp4
+ ```
+  
+**inference via webcam**
+```bash
+  python3 inference_mb2_video.py \
+  --video 0 \
+  --model models/model_mb2/mb2-ssd-lite-Epoch-225-Loss-2.6423.pth \
+  --labels models/model_mb2/labels.txt \
+  --threshold 0.4
+```
+
+**inference via cam**
+```bash
+python3 inference2.py   --video "rtsp://admin:L2E78815@10.0.22.1:554/cam/realmonitor?channel=1&subtype=1&unicast=true&proto=Onvif"   --model models/model_mb2/mb2-ssd-lite-Epoch-530-Loss-2.0126.pth   --labels models/model_mb2/labels.txt   --threshold 0.5
+```
