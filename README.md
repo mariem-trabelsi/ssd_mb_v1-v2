@@ -113,7 +113,9 @@ python result2.py
 ```
 The python file result1.py for ssd mb1 et result2.py for v2.
 
-output: 
+Output: 
+
+```bash
 ✅ Meilleur checkpoint : mb2-ssd-lite-Epoch-730-Loss-1.9619.pth (Epoch 730, Loss 1.9619)
 📂 Chemin complet : models/model_mb2/mb2-ssd-lite-Epoch-730-Loss-1.9619.pth
 Evaluation images: 100%|██████████████████████| 142/142 [00:09<00:00, 15.37it/s]
@@ -124,7 +126,7 @@ Evaluation images: 100%|██████████████████�
  - Average persons per image: 9.28
 
 ✅ Graphiques sauvegardés dans le dossier 'results/'
-
+```
 
 This will generate histogram_scores.png, person_count.png and precision_recall_curve.png in results folder.
 
