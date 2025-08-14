@@ -76,7 +76,7 @@ zipp==3.23.0
 ```
 
 
-## Workflow
+## 💡Workflow
 
 Follow these steps to train and run the model:
 
@@ -133,10 +133,10 @@ This will generate histogram_scores.png, person_count.png and precision_recall_c
 
 
 
-6. **Run inference**
+6. **Run Inference**
 Test your trained model using the inference script:
 
-**inference from local video**
+**Inference from local video**
 ```bash
 python3 inference_mb2_video.py \
   --video data/video.mp4 \
@@ -147,7 +147,7 @@ python3 inference_mb2_video.py \
   --save output_mb2.mp4
  ```
   
-**inference via webcam**
+**Inference via webcam**
 ```bash
   python3 inference_mb2_video.py \
   --video 0 \
@@ -156,7 +156,7 @@ python3 inference_mb2_video.py \
   --threshold 0.4
 ```
 
-**inference via cam**
+**Inference via cam**
 ```bash
 python3 inference2.py   --video "rtsp://admin:xxxxxx@xx.0.xx.1:xxx/cam/realmonitor?channel=1&subtype=1&unicast=true&proto=Onvif"   --model models/model_mb2/mb2-ssd-lite-Epoch-best-one.pth   --labels models/model_mb2/labels.txt   --threshold 0.5
 ```
