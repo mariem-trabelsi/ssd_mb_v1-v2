@@ -106,15 +106,16 @@ python seperate_dataset.py
 ```bash
 python seperate_dataset.py
 ```
-this will generate histogram_scores.png, person_count.png and precision_recall_curve.png
+this will generate histogram_scores.png, person_count.png and precision_recall_curve.png in results folder.
 
 
 
 
 6. **Run inference**
 Test your trained model using the inference script:
+
+**inference from local video**
 ```bash
-**** inference from local video
 python3 inference_mb2_video.py \
   --video data/video.mp4 \
   --model models/model_mb2/best_epoch.pth \
