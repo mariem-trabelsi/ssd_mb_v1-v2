@@ -85,7 +85,7 @@ Follow these steps to train and run the model:
 python -m venv venv
 source venv/bin/activate   # Linux/macOS
 venv\Scripts\activate      # Windows
-
+---
 2. **Annotate your data**
 Use Roboflow to label your images in VOC XML format.
 
