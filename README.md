@@ -162,6 +162,6 @@ python3 inference2.py   --video "rtsp://admin:xxxxxx@xx.0.xx.1:xxx/cam/realmonit
 ```
 You can update threshold as you want.
 
-## Demo
+## results ( while training)
 ![result](image1.png)
 
