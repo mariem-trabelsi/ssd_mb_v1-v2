@@ -1,0 +1,40 @@
+
+
+
+========================================================================================================================================================
+source venv-39/bin/activate
+============================================================    ===========================================  =======================================================
+ssd mobile net v2
+
+***** model results
+python result2.py
+
+
+**** inference from video
+python3 inference_mb2_video.py \
+  --video data/test_video.mp4 \
+  --model models/model_mb2/mb2-ssd-lite-Epoch-225-Loss-2.6423.pth \
+  --labels models/model_mb2/labels.txt \
+  --threshold 0.4 \
+  --use-cuda true \
+  --save output_mb2.mp4
+ 
+  
+***** inference via webcam
+  python3 inference_mb2_video.py \
+  --video 0 \
+  --model models/model_mb2/mb2-ssd-lite-Epoch-225-Loss-2.6423.pth \
+  --labels models/model_mb2/labels.txt \
+  --threshold 0.4
+
+
+***** inference via cam
+python3 inference2.py   --video "rtsp://admin:L2E78815@10.0.22.1:554/cam/realmonitor?channel=1&subtype=1&unicast=true&proto=Onvif"   --model models/model_mb2/mb2-ssd-lite-Epoch-530-Loss-2.0126.pth   --labels models/model_mb2/labels.txt   --threshold 0.5
+
+ 
+  
+  
+
+
+
+

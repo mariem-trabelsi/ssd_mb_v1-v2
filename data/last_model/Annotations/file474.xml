@@ -1,0 +1,16 @@
+<annotation>
+	<folder></folder>
+	<filename>tyimages_jpeg.rf.1f1f420c14d1b2ad1a0cb10f7d5460f4.jpg</filename>
+	<path>tyimages_jpeg.rf.1f1f420c14d1b2ad1a0cb10f7d5460f4.jpg</path>
+	<source>
+		<database>roboflow.com</database>
+	</source>
+	<size>
+		<width>300</width>
+		<height>300</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<metadata>
+	</metadata>
+</annotation>
