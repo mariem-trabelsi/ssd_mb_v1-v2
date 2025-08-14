@@ -161,3 +161,7 @@ python3 inference_mb2_video.py \
 python3 inference2.py   --video "rtsp://admin:xxxxxx@xx.0.xx.1:xxx/cam/realmonitor?channel=1&subtype=1&unicast=true&proto=Onvif"   --model models/model_mb2/mb2-ssd-lite-Epoch-best-one.pth   --labels models/model_mb2/labels.txt   --threshold 0.5
 ```
 You can update threshold as you want.
+
+## Demo
+![result](images/image1.png)
+
