@@ -81,7 +81,7 @@ zipp==3.23.0
 
 Follow these steps to train and run the model:
 
-1. **Create a Python virtual environment and install libs**
+1. **Set Up Python Environment (3.9) and Install Dependencies**
 ```bash
 python -m venv venv
 source venv/bin/activate   # Linux/macOS
@@ -91,7 +91,7 @@ venv\Scripts\activate      # Windows
 2. **Annotate your data**
 Use Roboflow to label your images in VOC XML format.
 
-3. **Prepare your dataset**
+3. **Prepare Your Dataset Structure**
 
 Unzip your dataset.
 Split it using the command:
@@ -99,7 +99,7 @@ Split it using the command:
 python seperateImages.py
 ```
 
-4. **Start training**
+4. **Start model training**
 ```bash
 python3 train_ssd_mb2.py     --validation-epochs 5     --log-level info     
 
@@ -108,7 +108,7 @@ you can resume training by adding this flag with the last epoch
 ```bash
 --resume models/model_mb2/checkpoint-epoch-xx.pth
 ```
-5. **evaluation**
+5. **Evaluate Model Performance**
 ```bash
 python result2.py
 ```
