@@ -1,6 +1,7 @@
 # SSD MobileNet Fine-Tuning for "Person" Class
 
 This project demonstrates the workflow to fine-tune **SSD MobileNet** for the **"person"** class.  
+You can adjust labels.txt file under models folder to fine tune other objects included in **COCO dataset**
 It removes the two pre-trained SSD models (MobileNet V1 and V2) and trains a custom model on your dataset.
 
 ---
